@@ -1,4 +1,5 @@
 "use strict";
+
 describe("Сумма свойств", function () {
     describe("передаем обьект", function () {
         var salaries = {
@@ -6,14 +7,33 @@ describe("Сумма свойств", function () {
             "Петя": 300,
             "Даша": 250
         };
-        summObj(salaries);
+        it("передаем существующий объект", function () {
+            assert.equal(maxObj(salaries), "Петя");
+        });
+        var noObj;
+        it("передаем несуществующий объект", function () {
+            assert.equal(maxObj(noObj), "нет сотрудников");
+        });
+
+    });
+});
+
+
+
+describe("Сумма свойств", function () {
+    describe("передаем обьект", function () {
+        var salaries = {
+            "Вася": 100,
+            "Петя": 300,
+            "Даша": 250
+        };
         it("передаем существующий объект", function () {
             assert.equal(summObj(salaries), 650);
         });
-//        var noObj;
-//        it("передаем несуществующий объект", function () {
-//            assert.equal(summObj(noObj), 0);
-//        });
+       var noObj;
+       it("передаем несуществующий объект", function () {
+           assert.equal(summObj(noObj), 0);
+       });
 
     });
 });
@@ -73,11 +93,11 @@ describe("isEmpty", function () {
             a: 'sdf'
         };
         it("передаем существующий объект", function () {
-            assert.equal(isEmpty(schedule), true);
+            assert.equal(isEmpty(schedule), false);
         });
         var noObj;
         it("передаем несуществующий объект", function () {
-            assert.equal(!!isEmpty(noObj), false);
+            assert.equal(!!isEmpty(noObj), true);
         });
 
     });
