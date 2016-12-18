@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="34b5c44b-4069-4868-9625-6413c39c0760" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/arrays.js" afterPath="$PROJECT_DIR$/dist/arrays.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/testArray.js" afterPath="$PROJECT_DIR$/dist/testArray.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/arrays.js" afterPath="$PROJECT_DIR$/src/arrays.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testArray.js" afterPath="$PROJECT_DIR$/src/testArray.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -291,7 +286,7 @@
       <workItem from="1481893466259" duration="715000" />
       <workItem from="1481974751109" duration="144000" />
       <workItem from="1481974929694" duration="23337000" />
-      <workItem from="1482073574312" duration="9669000" />
+      <workItem from="1482073574312" duration="9789000" />
     </task>
     <task id="LOCAL-00001" summary="q">
       <created>1481893687645</created>
@@ -342,11 +337,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482071928992</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="создать поиск по массиву">
+      <created>1482083685692</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1482083685692</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33865000" />
+    <option name="totallyTimeSpent" value="33985000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -429,7 +431,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="q" />
-    <option name="LAST_COMMIT_MESSAGE" value="q" />
+    <MESSAGE value="создать поиск по массиву" />
+    <option name="LAST_COMMIT_MESSAGE" value="создать поиск по массиву" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
