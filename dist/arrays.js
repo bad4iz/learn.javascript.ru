@@ -21,6 +21,21 @@
 // };
 //
 /**
+ * поиск в массиве
+ */
+function find(arr, value) {
+    var fal = -1;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] !== false) {
+            if (arr[i] == value) {
+                return i;
+            }
+        }
+    }
+    return fal;
+}
+
+/**
  * проверка на равенство числа
  * если больше то 1
  * меньше -1

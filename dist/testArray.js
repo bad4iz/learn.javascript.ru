@@ -4,33 +4,52 @@
  * Created by bad4iz on 18.12.2016.
  */
 describe("проверка свойств массива", function () {
-    function ara() {
-        for (var _i = 0; _i < 1000; _i++) {
-            var _b = 60;
-            var _a = getRand(1, _b);
-        }
-        it("номер " + i + " " + a + "<" + b, function () {
-            assert.equal(eq(a, b), -1);
-        });
-    }
+    var ar = ["test", 2, 1.5, false];
 
-    describe("проверка на включение выборки в диапазон ", ara);
+    describe("поиск в массиве", function () {
+        it("поиск find(arr, test)", function () {
+            assert.equal(find(ar, "test"), 0);
+        });
+        it("поиск find(arr, 2)", function () {
+            assert.equal(find(ar, 2), 1);
+        });
+        it("поиск find(arr, 1,5)", function () {
+            assert.equal(find(ar, 1.5), 2);
+        });
+        it("поиск find(arr, 0)", function () {
+            assert.equal(find(ar, 0), -1);
+        });
+    });
+
+    function ara() {
+        var _loop = function _loop(i) {
+            var b = 60;
+            var a = getRand(1, b);
+            it("номер " + i + " " + a + "<" + b, function () {
+                assert.equal(eq(a, b), -1);
+            });
+        };
+
+        for (var i = 0; i < 1000; i++) {
+            _loop(i);
+        }
+    }
+    // describe("проверка на включение выборки в диапазон ", ara);
+
 
     var arr = [];
     var arr2 = [];
     var n = Math.random() * 100;
-    for (var _i2 = 0; _i2 < n; _i2++) {
-        arr[_i2] = Math.random() + 100;
+    for (var i = 0; i < n; i++) {
+        arr[i] = Math.random() + 100;
     }
+
     describe("передаем обьект", function () {
         it("массив с " + arr.length + " элементами. последний " + arr[arr.length - 1], function () {
             assert.equal(endArr(arr), arr[arr.length - 1]);
         });
-        // let noObj;
-        // it("передаем несуществующий объект", () => {
-        //     assert.equal(endArr(noObj), false);
-        // });
     });
+
     describe("проверка на добавление последнего элемента", function () {
         // пушим в arr, 'Компьютер'
         pushArr(arr, 'Компьютер');
@@ -42,9 +61,5 @@ describe("проверка свойств массива", function () {
         it("передаем в массив " + elm, function () {
             assert.equal(endArr(arr2), elm);
         });
-        // let noObj;
-        // it("передаем несуществующий объект", () => {
-        //     assert.equal(endArr(noObj), false);
-        // });
     });
 });

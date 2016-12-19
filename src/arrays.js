@@ -20,6 +20,22 @@
 // };
 //
 /**
+ * поиск в массиве
+ */
+function find(arr, value) {
+    let fal = -1;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== false) {
+            if (arr[i] == value) {
+                return i;
+            }
+        }
+    }
+    return fal;
+}
+
+
+/**
  * проверка на равенство числа
  * если больше то 1
  * меньше -1
@@ -27,7 +43,7 @@
  */
 function eq(a, b) {
     if (a < b) return -1;
-    if (a > b ) return 1;
+    if (a > b) return 1;
     if (a == b) return 0;
 }
 
