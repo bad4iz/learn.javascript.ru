@@ -1,7 +1,62 @@
 /**
  * Created by bad4iz on 18.12.2016.
  */
+
+
+describe("Решето Эратосфена", function() {
+
+    it("returns the filtered values", function() {
+
+        let arr = [];
+        for(let i = 0; i < 120; i++){
+            arr[i] = i+1;
+        }
+
+        let filtered = erafon(arr);
+
+        assert.deepEqual(filtered, [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113]);
+    });
+});
+
+
+
+
+describe("Фильтр диапазона", function() {
+
+    it("returns the filtered values", function() {
+
+        let arr = [5, 3, 8, 1];
+
+        let filtered = filterRange(arr, 1, 4);
+
+        assert.deepEqual(filtered, [3, 1]);
+    });
+
+    it("doesn't change the array", function() {
+
+        let arr = [5, 3, 8, 1];
+
+        let filtered = filterRange(arr, 1, 4);
+
+        assert.deepEqual(arr, [5,3,8,1]);
+    });
+
+});
+
+
 describe("проверка свойств массива", () => {
+    function ara() {
+        for (let i = 0; i < 1000; i++) {
+            let b = 60;
+            let a = getRand(1, b);
+            it("номер " + i + " " + a + "<" + b, () => {
+                assert.equal(eq(a, b), -1);
+            });
+        }
+
+    }
+
+
     let ar = ["test", 2, 1.5, false];
 
 
@@ -21,16 +76,7 @@ describe("проверка свойств массива", () => {
 
     });
 
-    function ara() {
-        for (let i = 0; i < 1000; i++) {
-            let b = 60;
-            let a = getRand(1, b);
-        it("номер " + i + " " + a + "<" + b, () => {
-            assert.equal(eq(a, b), -1);
-        });
-        }
 
-    }
    // describe("проверка на включение выборки в диапазон ", ara);
 
 

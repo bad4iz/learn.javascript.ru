@@ -19,6 +19,70 @@
 // window.onload = ()=>{
 // };
 //
+
+
+/**
+ * Решето Эратосфена
+ *
+ */
+function erafon(arr) {
+    let num = 1;
+
+    for(; mum < arr.length; num++){
+        if (arr[i]%mun){
+            arr.splice(num, 1);
+            console.log(arr[i]);
+        }
+    }
+
+
+    return arr
+}
+
+
+
+/**
+ * Фильтр диапазона
+ *
+ * var arr = [5, 4, 3, 8, 0];
+
+ var filtered = filterRange(arr, 3, 5);
+ // теперь filtered = [5, 4, 3]
+ // arr не изменился
+ */
+
+
+let arr = [5, 4, 3, 8, 0];
+
+
+function filterRange(arr, a, b){
+let newArr = [];
+    if (a == b) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == b) {
+                newArr.push(arr[i]);
+            }
+        }
+    }
+    if (a < b){
+        for (let i = 0; i < arr.length; i++) {
+                if ( (a <= arr[i])&&(arr[i] <= b)) {
+                    newArr.push(arr[i]);
+                }
+        }
+    }
+    if (a > b){
+        for (let i = 0; i < arr.length; i++) {
+            if ((b <= arr[i])&&(arr[i] <= a)) {
+                newArr.push(arr[i]);
+            }
+        }
+    }
+    return newArr;
+}
+
+
+
 /**
  * поиск в массиве
  */
@@ -83,12 +147,26 @@ function foo() {
  */
 
 function setMessage(mess) {
+    let text = "";
+    if(Array.isArray(mess)){
+            text = mess.join(' ,');
+            console.log(text);
+    }else {
+        text = mess;
+    }
     let message = document.getElementById('message');
-    message.innerHTML += mess + '<br/>';
-    console.log(mess);
+    message.innerHTML += text + '<br/>' ;
+    console.log(text);
 }
 
-window.onload = foo;
+
+
+function ggg(){
+    setMessage(filterRange(arr, 3, 5));
+}
+
+window.onload  = ggg;
+// window.onload = foo;
 function pushArr(arr, elm) {
     if (arr.push(elm)) return true;
     return false;

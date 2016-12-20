@@ -3,7 +3,58 @@
 /**
  * Created by bad4iz on 18.12.2016.
  */
+
+describe("Решето Эратосфена", function () {
+
+    it("returns the filtered values", function () {
+
+        var arr = [];
+        for (var i = 0; i < 120; i++) {
+            arr[i] = i + 1;
+        }
+
+        var filtered = erafon(arr);
+
+        assert.deepEqual(filtered, [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113]);
+    });
+});
+
+describe("Фильтр диапазона", function () {
+
+    it("returns the filtered values", function () {
+
+        var arr = [5, 3, 8, 1];
+
+        var filtered = filterRange(arr, 1, 4);
+
+        assert.deepEqual(filtered, [3, 1]);
+    });
+
+    it("doesn't change the array", function () {
+
+        var arr = [5, 3, 8, 1];
+
+        var filtered = filterRange(arr, 1, 4);
+
+        assert.deepEqual(arr, [5, 3, 8, 1]);
+    });
+});
+
 describe("проверка свойств массива", function () {
+    function ara() {
+        var _loop = function _loop(i) {
+            var b = 60;
+            var a = getRand(1, b);
+            it("номер " + i + " " + a + "<" + b, function () {
+                assert.equal(eq(a, b), -1);
+            });
+        };
+
+        for (var i = 0; i < 1000; i++) {
+            _loop(i);
+        }
+    }
+
     var ar = ["test", 2, 1.5, false];
 
     describe("поиск в массиве", function () {
@@ -21,19 +72,6 @@ describe("проверка свойств массива", function () {
         });
     });
 
-    function ara() {
-        var _loop = function _loop(i) {
-            var b = 60;
-            var a = getRand(1, b);
-            it("номер " + i + " " + a + "<" + b, function () {
-                assert.equal(eq(a, b), -1);
-            });
-        };
-
-        for (var i = 0; i < 1000; i++) {
-            _loop(i);
-        }
-    }
     // describe("проверка на включение выборки в диапазон ", ara);
 
 
