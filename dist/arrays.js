@@ -9,6 +9,15 @@
  *
  */
 
+function sumEratosfen(arr) {
+    var newArr = eratosfen(arr);
+    var sum = 0;
+    for (var i = 0; i < newArr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
 function eratosfen(arr) {
     var a = void 0,
         b = void 0;
@@ -30,41 +39,45 @@ function eratosfen(arr) {
 }
 
 ////////////////////////////////////////////////
-// шаг 1
-arr = [];
 
-for (var i = 2; i < 100; i++) {
-    arr[i] = true;
-}
-
-// шаг 2
-var p = 2;
-
-do {
-    // шаг 3
-    for (i = 2 * p; i < 100; i += p) {
-        arr[i] = false;
-    }
-
-    // шаг 4
-    for (i = p + 1; i < 100; i++) {
-        if (arr[i]) break;
-    }
-
-    p = i;
-} while (p * p < 100); // шаг 5
-
-// шаг 6 (готово)
-// посчитать сумму
-var sum = 0;
-for (i = 0; i < arr.length; i++) {
-    if (arr[i]) {
-        sum += i;
-    }
-}
-
-alert(sum);
-
+// // шаг 1
+// arr = [];
+//
+// for (var i = 2; i < 100; i++) {
+//     arr[i] = true
+// }
+//
+// // шаг 2
+// let p = 2;
+//
+// do {
+//     // шаг 3
+//     for (i = 2 * p; i < 100; i += p) {
+//         arr[i] = false;
+//
+//     }
+//
+//     // шаг 4
+//     for (i = p + 1; i < 100; i++) {
+//
+//         if (arr[i]){
+//             console.log(i);
+//             break;
+//         }
+//     }
+//
+//     p = i;
+// } while (p * p < 100); // шаг 5
+//
+// // шаг 6 (готово)
+// // посчитать сумму
+// let sum = 0;
+// for (i = 0; i < arr.length; i++) {
+//     if (arr[i]) {
+//         sum += i;
+//     }
+// }
+// console.log(sum);
 /////////////////////////////////////////////////////////////
 
 
@@ -96,23 +109,23 @@ var arr = [5, 4, 3, 8, 0];
 function filterRange(arr, a, b) {
     var newArr = [];
     if (a === b) {
-        for (var _i = 0; _i < arr.length; _i++) {
-            if (arr[_i] === b) {
-                newArr.push(arr[_i]);
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] === b) {
+                newArr.push(arr[i]);
             }
         }
     }
     if (a < b) {
-        for (var _i2 = 0; _i2 < arr.length; _i2++) {
-            if (a <= arr[_i2] && arr[_i2] <= b) {
-                newArr.push(arr[_i2]);
+        for (var _i = 0; _i < arr.length; _i++) {
+            if (a <= arr[_i] && arr[_i] <= b) {
+                newArr.push(arr[_i]);
             }
         }
     }
     if (a > b) {
-        for (var _i3 = 0; _i3 < arr.length; _i3++) {
-            if (b <= arr[_i3] && arr[_i3] <= a) {
-                newArr.push(arr[_i3]);
+        for (var _i2 = 0; _i2 < arr.length; _i2++) {
+            if (b <= arr[_i2] && arr[_i2] <= a) {
+                newArr.push(arr[_i2]);
             }
         }
     }
@@ -124,10 +137,10 @@ function filterRange(arr, a, b) {
  */
 function find(arr, value) {
     var fal = -1;
-    for (var _i4 = 0; _i4 < arr.length; _i4++) {
-        if (arr[_i4] !== false) {
-            if (arr[_i4] == value) {
-                return _i4;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] !== false) {
+            if (arr[i] == value) {
+                return i;
             }
         }
     }
@@ -169,8 +182,8 @@ function foo() {
     styles.shift();
     styles.unshift('Регги');
     styles.unshift('Рэп');
-    for (var _i5 = 0; _i5 < styles.length; _i5++) {
-        message += '' + styles[_i5] + ', ';
+    for (var i = 0; i < styles.length; i++) {
+        message += '' + styles[i] + ', ';
     }
     setMessage(message);
     setMessage("dsdfsdfs");

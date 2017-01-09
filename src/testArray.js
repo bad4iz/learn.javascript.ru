@@ -3,6 +3,20 @@
  */
 
 
+describe(" Сумма решета Эратосфена", function() {
+
+    it("returns the filtered values", function() {
+
+        let arr = [];
+        for(let i = 0; i < 99; i++){
+            arr[i] = i+2;
+        }
+        assert.equal(sumEratosfen(arr), 1060);
+    });
+});
+
+
+
 describe("Решето Эратосфена", function() {
 
     it("returns the filtered values", function() {

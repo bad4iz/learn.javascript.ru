@@ -7,6 +7,22 @@
  *
  */
 
+
+
+
+
+
+
+function sumEratosfen(arr) {
+    let newArr = eratosfen(arr);
+    let sum = 0;
+    for (let i = 0; i < newArr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+
 function eratosfen(arr) {
     let a,
         b;
@@ -22,51 +38,53 @@ function eratosfen(arr) {
 
         // добавляяем удаленный b
         arr.push(a);
-     // пока первый элемент больше последнего
-    }while (arr[0]>arr[arr.length - 1]);
+        // пока первый элемент больше последнего
+    } while (arr[0] > arr[arr.length - 1]);
     return arr
 }
 
 
-
 ////////////////////////////////////////////////
-// шаг 1
-arr = [];
 
-for (var i = 2; i < 100; i++) {
-    arr[i] = true
-}
-
-// шаг 2
-var p = 2;
-
-do {
-    // шаг 3
-    for (i = 2 * p; i < 100; i += p) {
-        arr[i] = false;
-    }
-
-    // шаг 4
-    for (i = p + 1; i < 100; i++) {
-        if (arr[i]) break;
-    }
-
-    p = i;
-} while (p * p < 100); // шаг 5
-
-// шаг 6 (готово)
-// посчитать сумму
-let sum = 0;
-for (i = 0; i < arr.length; i++) {
-    if (arr[i]) {
-        sum += i;
-    }
-}
-
-alert( sum );
-
+// // шаг 1
+// arr = [];
+//
+// for (var i = 2; i < 100; i++) {
+//     arr[i] = true
+// }
+//
+// // шаг 2
+// let p = 2;
+//
+// do {
+//     // шаг 3
+//     for (i = 2 * p; i < 100; i += p) {
+//         arr[i] = false;
+//
+//     }
+//
+//     // шаг 4
+//     for (i = p + 1; i < 100; i++) {
+//
+//         if (arr[i]){
+//             console.log(i);
+//             break;
+//         }
+//     }
+//
+//     p = i;
+// } while (p * p < 100); // шаг 5
+//
+// // шаг 6 (готово)
+// // посчитать сумму
+// let sum = 0;
+// for (i = 0; i < arr.length; i++) {
+//     if (arr[i]) {
+//         sum += i;
+//     }
+// }
+// console.log(sum);
 /////////////////////////////////////////////////////////////
-
 
 
 /* создание массива

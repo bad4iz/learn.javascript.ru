@@ -4,6 +4,18 @@
  * Created by bad4iz on 18.12.2016.
  */
 
+describe(" Сумма решета Эратосфена", function () {
+
+    it("returns the filtered values", function () {
+
+        var arr = [];
+        for (var i = 0; i < 99; i++) {
+            arr[i] = i + 2;
+        }
+        assert.equal(sumEratosfen(arr), 1060);
+    });
+});
+
 describe("Решето Эратосфена", function () {
 
     it("returns the filtered values", function () {
