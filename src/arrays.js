@@ -1,14 +1,53 @@
 /**
  * Created by bad4iz on 17.12.2016.
  */
+function filterRangeInPlace(arr, a, b)  {
+    for(let i = 0; i < arr.length; i++){
+        if((arr[i] < a)||(arr[i] > b)){
+            arr.splice(i, 1);;
+        }
+    }
+    return arr;
+}
 
-/**
- * Решето Эратосфена
- *
- */
+
+function removeClass(obj, elm)  {
+    let myStr= obj.className.split(' ');
+
+    for(let i = 0; i < myStr.length; i++){
+        if(myStr[i] == elm){
+            myStr.splice(i, 1);
+            i -= 1;
+        }
+    }
+    return obj.className = myStr.join(" ").trim();
+}
 
 
 
+function camelize(str){
+    let o;
+    let myStr= str ? str.split('-') : [];
+
+    for(let i = 1; i < myStr.length; i++){
+        myStr[i] = myStr[i].slice(0, 1).toUpperCase() + myStr[i].slice(1);;
+    }
+    return myStr.join("");
+
+}
+
+
+function addClass(obj, elm) {
+    let arr4 = [];
+    let myObj= obj.className;
+     arr4 = myObj.split(" ");
+    if (arr4.indexOf(elm) < 0){
+        arr4.push(elm);
+        obj.className = arr4.join(" ").trim();
+    }
+    return obj;
+
+}
 
 
 

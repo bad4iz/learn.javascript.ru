@@ -1,13 +1,49 @@
-"use strict";
+'use strict';
 
 /**
  * Created by bad4iz on 17.12.2016.
  */
+function filterRangeInPlace(arr, a, b) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] < a || arr[i] > b) {
+            arr.splice(i, 1);;
+        }
+    }
+    return arr;
+}
 
-/**
- * Решето Эратосфена
- *
- */
+function removeClass(obj, elm) {
+    var myStr = obj.className.split(' ');
+
+    for (var i = 0; i < myStr.length; i++) {
+        if (myStr[i] == elm) {
+            myStr.splice(i, 1);
+            i -= 1;
+        }
+    }
+    return obj.className = myStr.join(" ").trim();
+}
+
+function camelize(str) {
+    var o = void 0;
+    var myStr = str ? str.split('-') : [];
+
+    for (var i = 1; i < myStr.length; i++) {
+        myStr[i] = myStr[i].slice(0, 1).toUpperCase() + myStr[i].slice(1);;
+    }
+    return myStr.join("");
+}
+
+function addClass(obj, elm) {
+    var arr4 = [];
+    var myObj = obj.className;
+    arr4 = myObj.split(" ");
+    if (arr4.indexOf(elm) < 0) {
+        arr4.push(elm);
+        obj.className = arr4.join(" ").trim();
+    }
+    return obj;
+}
 
 function sumEratosfen(arr) {
     var newArr = eratosfen(arr);

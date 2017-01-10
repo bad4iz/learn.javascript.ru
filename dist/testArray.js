@@ -4,6 +4,121 @@
  * Created by bad4iz on 18.12.2016.
  */
 
+describe("camelize", function () {
+
+    it("leaves an empty line as is", function () {
+        assert.equal(camelize(""), "");
+    });
+
+    it("turns background-color into backgroundColor", function () {
+        assert.equal(camelize("background-color"), "backgroundColor");
+    });
+
+    it("turns list-style-image into listStyleImage", function () {
+        assert.equal(camelize("list-style-image"), "listStyleImage");
+    });
+
+    it("turns -webkit-transition into WebkitTransition", function () {
+        assert.equal(camelize("-webkit-transition"), "WebkitTransition");
+    });
+});
+
+describe("removeClass", function () {
+
+    it("ничего не делает, если класса нет", function () {
+        var obj = {
+            className: 'open menu'
+        };
+        removeClass(obj, 'new');
+        assert.deepEqual(obj, {
+            className: 'open menu'
+        });
+    });
+
+    it("не меняет пустое свойство", function () {
+        var obj = {
+            className: ''
+        };
+        removeClass(obj, 'new');
+        assert.deepEqual(obj, {
+            className: ""
+        });
+    });
+
+    it("удаляет класс, не оставляя лишних пробелов", function () {
+        var obj = {
+            className: 'open menu'
+        };
+        removeClass(obj, 'open');
+        assert.deepEqual(obj, {
+            className: "menu"
+        });
+    });
+
+    it("если класс один и он удалён, то результат - пустая строка", function () {
+        var obj = {
+            className: "menu"
+        };
+        removeClass(obj, 'menu');
+        assert.deepEqual(obj, {
+            className: ""
+        });
+    });
+
+    it("удаляет класс из середины списка", function () {
+        var obj = {
+            className: "open menu now"
+        };
+        removeClass(obj, 'menu');
+        assert.deepEqual(obj, {
+            className: "open now"
+        });
+    });
+
+    it("удаляет повторяющийся класс из середины списка", function () {
+        var obj = {
+            className: "open menu menu zero"
+        };
+        removeClass(obj, 'menu');
+        assert.deepEqual(obj, {
+            className: "open zero"
+        });
+    });
+});
+
+describe("addClass", function () {
+
+    it("добавляет класс, которого нет", function () {
+        var obj = {
+            className: 'open menu'
+        };
+        addClass(obj, 'new');
+        assert.deepEqual(obj, {
+            className: 'open menu new'
+        });
+    });
+
+    it("не добавляет класс, который уже есть", function () {
+        var obj = {
+            className: 'open menu'
+        };
+        addClass(obj, 'open');
+        assert.deepEqual(obj, {
+            className: 'open menu'
+        });
+    });
+
+    it("не добавляет лишних пробелов, который уже есть", function () {
+        var obj = {
+            className: ''
+        };
+        addClass(obj, 'open');
+        assert.deepEqual(obj, {
+            className: 'open'
+        });
+    });
+});
+
 describe(" Сумма решета Эратосфена", function () {
 
     it("returns the filtered values", function () {
