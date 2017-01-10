@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="34b5c44b-4069-4868-9625-6413c39c0760" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/arrays.js" afterPath="$PROJECT_DIR$/dist/arrays.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/testArray.js" afterPath="$PROJECT_DIR$/dist/testArray.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/arrays.js" afterPath="$PROJECT_DIR$/src/arrays.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testArray.js" afterPath="$PROJECT_DIR$/src/testArray.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -317,7 +313,7 @@
       <workItem from="1482724874974" duration="7261000" />
       <workItem from="1483940399148" duration="13290000" />
       <workItem from="1484046455786" duration="286000" />
-      <workItem from="1484054917284" duration="5000" />
+      <workItem from="1484054917284" duration="63000" />
     </task>
     <task id="LOCAL-00001" summary="q">
       <created>1481893687645</created>
@@ -417,11 +413,18 @@
       <option name="project" value="LOCAL" />
       <updated>1483944097177</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="gg">
+      <created>1484054945158</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1484054945158</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106589000" />
+    <option name="totallyTimeSpent" value="106647000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -434,7 +437,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1296" height="1010" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36084142" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -508,7 +511,8 @@
     <MESSAGE value="создать поиск по массиву" />
     <MESSAGE value="эфект эрастофена" />
     <MESSAGE value="сделано решето эрастофена" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделано решето эрастофена" />
+    <MESSAGE value="gg" />
+    <option name="LAST_COMMIT_MESSAGE" value="gg" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
