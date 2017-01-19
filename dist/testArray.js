@@ -4,6 +4,24 @@
  * Created by bad4iz on 18.12.2016.
  */
 
+describe("reversSort", function () {
+
+    it("Сортировать в обратном порядке", function () {
+        var arr = [5, 2, 1, -10, 8];
+        revertSort(arr);
+        assert.deepEqual(arr, [8, 5, 2, 1, -10]);
+    });
+});
+
+describe("filterRangeInPlace", function () {
+
+    it("меняет массив, оставляя только значения из диапазона", function () {
+        var arr = [5, 3, 8, 1];
+        filterRangeInPlace(arr, 1, 4);
+        assert.deepEqual(arr, [3, 1]);
+    });
+});
+
 describe("camelize", function () {
 
     it("leaves an empty line as is", function () {

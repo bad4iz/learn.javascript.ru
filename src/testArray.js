@@ -4,6 +4,28 @@
 
 
 
+describe("reversSort", function() {
+
+    it("Сортировать в обратном порядке", function() {
+        let arr = [5, 2, 1, -10, 8];
+        revertSort(arr);
+        assert.deepEqual(arr, [8, 5, 2, 1, -10]);
+    });
+
+});
+
+
+
+describe("filterRangeInPlace", function() {
+
+    it("меняет массив, оставляя только значения из диапазона", function() {
+        let arr = [5, 3, 8, 1];
+        filterRangeInPlace(arr, 1, 4);
+        assert.deepEqual(arr, [3, 1]);
+    });
+
+});
+
 describe("camelize", function() {
 
     it("leaves an empty line as is", function() {
@@ -28,7 +50,7 @@ describe("camelize", function() {
 describe("removeClass", function() {
 
     it("ничего не делает, если класса нет", function() {
-        var obj = {
+        let obj = {
             className: 'open menu'
         };
         removeClass(obj, 'new');
@@ -38,7 +60,7 @@ describe("removeClass", function() {
     });
 
     it("не меняет пустое свойство", function() {
-        var obj = {
+        let obj = {
             className: ''
         };
         removeClass(obj, 'new');
@@ -48,7 +70,7 @@ describe("removeClass", function() {
     });
 
     it("удаляет класс, не оставляя лишних пробелов", function() {
-        var obj = {
+        let obj = {
             className: 'open menu'
         };
         removeClass(obj, 'open');
@@ -58,7 +80,7 @@ describe("removeClass", function() {
     });
 
     it("если класс один и он удалён, то результат - пустая строка", function() {
-        var obj = {
+        let obj = {
             className: "menu"
         };
         removeClass(obj, 'menu');
@@ -68,7 +90,7 @@ describe("removeClass", function() {
     });
 
     it("удаляет класс из середины списка", function() {
-        var obj = {
+        let obj = {
             className: "open menu now"
         };
         removeClass(obj, 'menu');
@@ -78,7 +100,7 @@ describe("removeClass", function() {
     });
 
     it("удаляет повторяющийся класс из середины списка", function() {
-        var obj = {
+        let obj = {
             className: "open menu menu zero"
         };
         removeClass(obj, 'menu');
@@ -93,7 +115,7 @@ describe("removeClass", function() {
 describe("addClass", function() {
 
     it("добавляет класс, которого нет", function() {
-        var obj = {
+        let obj = {
             className: 'open menu'
         };
         addClass(obj, 'new');
@@ -103,7 +125,7 @@ describe("addClass", function() {
     });
 
     it("не добавляет класс, который уже есть", function() {
-        var obj = {
+        let obj = {
             className: 'open menu'
         };
         addClass(obj, 'open');
@@ -113,7 +135,7 @@ describe("addClass", function() {
     });
 
     it("не добавляет лишних пробелов, который уже есть", function() {
-        var obj = {
+        let obj = {
             className: ''
         };
         addClass(obj, 'open');

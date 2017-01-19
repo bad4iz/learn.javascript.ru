@@ -1,13 +1,20 @@
 /**
  * Created by bad4iz on 17.12.2016.
  */
+
+
+function revertSort(arr) {
+    arr.sort((a,b)=>b-a);
+}
+
+
+
 function filterRangeInPlace(arr, a, b)  {
     for(let i = 0; i < arr.length; i++){
         if((arr[i] < a)||(arr[i] > b)){
-            arr.splice(i, 1);;
+            arr.splice(i, 1);
         }
     }
-    return arr;
 }
 
 
