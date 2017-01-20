@@ -3,6 +3,13 @@
 /**
  * Created by bad4iz on 17.12.2016.
  */
+function aclean(isArr) {
+    var arr = slice();
+    var deleteArr = arr.forEach(function (x) {
+        x.sort();
+    });
+    return deleteArr;
+}
 
 function revertSort(arr) {
     arr.sort(function (a, b) {
@@ -35,7 +42,7 @@ function camelize(str) {
     var myStr = str ? str.split('-') : [];
 
     for (var i = 1; i < myStr.length; i++) {
-        myStr[i] = myStr[i].slice(0, 1).toUpperCase() + myStr[i].slice(1);;
+        myStr[i] = myStr[i].slice(0, 1).toUpperCase() + myStr[i].slice(1);
     }
     return myStr.join("");
 }
